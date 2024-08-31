@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 9</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema1.html">Problema 1</a></li>					
+                    <li><a href="Problema5.html">Problema 5</a></li>
+                    <li><a href="Problema6.html">Problema 6</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema12.html">Problema 12</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>Categorizar elementos.</h1>
+	<p>Hacer diferentes listados de una lista de 10 números según el siguiente criterio:
+	si número >=0 y número < 50, ponerlo en LISTA1
+	si número >=50 y número <100, ponerlo en LISTA2
+	si número >=100 y número <=150, ponerlo en LISTA3
+	</p>
+	<button onclick="mayN()" id="btn">Calcular</button>
+	<script>
+		function mayN() {
+			var n = 10;
+			var t = [];
+			for(var i = 0; i<n; i++) {
+				t[i] = 0;
+			}
+			var l1="";
+			var l2="";
+			var l3="";
+			for(var i = 0; i<n; i++) {
+				t[i] = prompt("Introduzca el elemento: ", "");
+				parseFloat(t[i]);
+			}
+			//alert(t[0]+" "+t[1]+" "+t[2]);
+			for(var i = 0; i<n; i++) {
+				if(parseFloat(t[i])>=0 && parseFloat(t[i])< 50) {
+					l1=l1+" "+parseFloat(t[i]);
+				}
+				if(parseFloat(t[i])>=50 && parseFloat(t[i])< 100) {
+					l2=l2+" "+parseFloat(t[i]);
+				}
+				if(parseFloat(t[i])>=100 && parseFloat(t[i])<= 150) {
+					l3=l3+" "+parseFloat(t[i]);
+				}
+			}
+			alert("lista 1: "+l1+", lista 2: "+l2+", lista 3: "+l3);
+		}
+	</script>
+</body>
+</html>

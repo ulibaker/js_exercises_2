@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 1</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema1.html">Problema 1</a></li>					
+                    <li><a href="Problema5.html">Problema 5</a></li>
+                    <li><a href="Problema6.html">Problema 6</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema12.html">Problema 12</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>Temperaturas.</h1>
+	<p>Se tienen N temperaturas almacenadas en un array. Se desea calcular su media y obtener el número de temperaturas mayores que la media.
+	</p>
+	<p>introduzca n</p>
+	<input id="n"></input>
+	<button onclick="temp()" id="btn">Calcular</button>
+	<script>
+		function temp() {
+			var n = parseFloat(document.getElementById("n").value);
+			var t = [];
+			for(var i = 0; i<n; i++) {
+				t[i] = 0;
+			}
+			var p = 0;
+			var m =0;
+			for(var i = 0; i<n; i++) {
+				t[i] = prompt("Introduzca la temperatura: ", "");
+				parseFloat(t[i]);
+			}
+			alert(t[0]+" "+t[1]+" "+t[2]);
+			alert(p);
+			for(var i = 0; i<n; i++) {
+				p = parseFloat(p)+parseFloat(t[i]);
+				alert(p);
+			}
+			p = parseFloat(p/n);
+			alert("Promedio: "+p);
+			for(var i = 0; i<n; i++) {
+				if(t[i]>p) {
+					m++;
+				}
+			}
+			alert("Mayores: "+m);
+		}
+	</script>
+</body>
+</html>

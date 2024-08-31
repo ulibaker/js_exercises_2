@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<title>PROBLEMA 12</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<link href="css/nav.css" rel="stylesheet" type="text/css">
+<head>
+	<header>
+        <h1 style="text-align: center;font-size: 30px;">Problemas de Javascript, Clase 11:00 - 12:00, 20550195</h1>
+        </div>
+    </header>
+    <nav>
+        <center>
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="Problema1.html">Problema 1</a></li>					
+                    <li><a href="Problema5.html">Problema 5</a></li>
+                    <li><a href="Problema6.html">Problema 6</a></li>
+					<li><a href="Problema9.html">Problema 9</a></li>
+					<li><a href="Problema12.html">Problema 12</a></li>
+					<li><a href="Problema16.html">Problema 16</a></li>
+                </ul>
+            </div>
+        </center>
+        <br>
+    </nav>
+</head>
+<body>
+	<br><br>
+	<h1>3x3.</h1>
+	<p>
+	Leer una matriz de 3 × 3.
+	</p>
+	
+	
+	<button onclick="matriz33()" id="btn">Calcular</button>
+	<script>
+
+		function matriz33() {	
+			var iMax = 3;
+			var jMax = 3;
+			var t = [];
+			for (let i = 0; i < iMax; i++) {
+				t[i] = [];
+				for (let j = 0; j < jMax; j++) {
+					t[i][j] = 0;
+				}
+			}
+			alert(t[0][0]+" "+t[0][1]+" "+t[0][2]+"\n"+t[1][0]+" "+t[1][1]+" "+t[1][2]+"\n"+t[2][0]+" "+t[2][1]+" "+t[2][2]);
+			
+			for(var i = 0; i<3; i++) {
+				for(var j = 0; j<3; j++) {
+					t[i][j] = prompt("Introduzca el elemento: ", "");
+				}		
+				//alert(t[i][0]+" "+t[i][1]+" "+t[i][2]);					
+			}
+			
+			alert(t[0][0]+" "+t[0][1]+" "+t[0][2]+"\n"+t[1][0]+" "+t[1][1]+" "+t[1][2]+"\n"+t[2][0]+" "+t[2][1]+" "+t[2][2]);							
+
+		}
+	</script>
+</body>
+</html>
